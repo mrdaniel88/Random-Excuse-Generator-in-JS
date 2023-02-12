@@ -1,1 +1,10 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+#excuse {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+#excuse-title {
+  font-size: xx-large;
+  font-weight: bold;
+}
