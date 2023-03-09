@@ -8,6 +8,11 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
+
+  function getRandomPosition(length) {
+    return Math.floor(Math.random() * length);
+  }
+
   let who = ["The dog", "My grandma", "His turtle", "My bird"];
   let action = ["ate", "peed", "crushed", "broke"];
   let what = ["my homework", "the keys", "the car"];
@@ -19,29 +24,13 @@ window.onload = function() {
     "while I was praying"
   ];
 
-  let randWho = "";
-  let randAction = "";
-  let randWhat = "";
-  let randWhen = "";
-
-  for (let i = 0; i < who.length; i++) {
-    randWho = who[Math.floor(Math.random() * who.length)];
-  }
-
-  for (let i = 0; i < action.length; i++) {
-    randAction = action[Math.floor(Math.random() * action.length)];
-  }
-
-  for (let i = 0; i < what.length; i++) {
-    randWhat = what[Math.floor(Math.random() * what.length)];
-  }
-
-  for (let i = 0; i < when.length; i++) {
-    randWhen = when[Math.floor(Math.random() * when.length)];
-  }
+  let whoValue = who[getRandomPosition(who.length)];
+  let actionValue = action[getRandomPosition(action.length)];
+  let whatValue = what[getRandomPosition(what.length)];
+  let whenValue = when[getRandomPosition(when.length)];
 
   document.getElementById(
     "excuse"
-  ).innerHTML = `<p id=\`excuse\`>${randWho} ${randAction} ${randWhat} ${randWhen}</p>`;
+  ).innerHTML = `<p id=\`excuse\`>${whoValue} ${actionValue} ${whatValue} ${whenValue}</p>`;
   console.log("Hello Rigo from the console!");
 };
