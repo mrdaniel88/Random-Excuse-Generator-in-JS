@@ -9,9 +9,9 @@ import "./assets/img/4geeks.ico";
 window.onload = function() {
   //write your code here
 
-  function getRandomPosition(length) {
+  let getRandomPosition = length => {
     return Math.floor(Math.random() * length);
-  }
+  };
 
   let who = ["The dog", "My grandma", "His turtle", "My bird"];
   let action = ["ate", "peed", "crushed", "broke"];
